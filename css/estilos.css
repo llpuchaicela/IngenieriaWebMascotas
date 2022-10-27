@@ -1,0 +1,70 @@
+/*
+MARGIN => DE BORDES A MARGENES
+espacio a todos los lados
+margin:10px;   
+aplica 20px arriba y abajo y 10px izq y dere
+margin: 20px 10px;
+aplica 10 arriba, 20 derecha 30 abajo y 40 izquierd
+margin 10px 20px 30px 40px
+PADDIN => DE BORDES Y PARRAFO
+MAX-WITH => SE AMPLIA LIMITE DE ANCHO
+*/
+
+
+
+*{ 
+	/*encera margenes*/
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: rgba(172,172,172,0.2); /*color de fondo*/
+	font-family: 'Poppins', sans-serif; /* letra tipo googlr fonts*/
+}
+.contenedor{
+	background-color: red;
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1124px;
+
+	display: grid;
+	/*grid ubica el contenido conforme a lo que se requiera*/
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(5,auto);
+	grid-template-areas: "header header header"
+						 "nav nav nav"
+						 "contenido contenido sidebar"
+						 "noticia1 noticia2 sidebar"
+						 "footer footer footer";
+}
+.contenedor .cabeceraPrincipal{
+	grid-area: header;
+	background-color: #fff;
+}
+.contenedor .menuPrincipal{
+	grid-area: nav;
+	background-color: #333
+}
+.contenedor .contenido{
+	grid-area: contenido;
+	background-color: #eee
+
+}
+.contenedor .sidebar{
+	grid-area: sidebar;
+		background-color: #fff
+}
+.contenedor .noticia1{
+	grid-area: noticia1;
+	background-color: #ccc
+}
+
+.contenedor .noticia2{
+	grid-area: noticia2;
+	background-color: #ccc
+}
+.contenedor .piePagina{
+	grid-area: footer;
+	background-color: #000
+}
