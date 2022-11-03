@@ -1,0 +1,159 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: rgba(215, 211, 211, 0.3);
+	font-family: 'Poppins', sans-serif;
+}
+.contenedor{
+	width: 90%;
+	max-width: 1524px;
+	margin: 0 auto;
+
+	display: grid;
+	grid-gap: 0px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(7, auto);
+
+	grid-template-areas: "header  header"
+						 "slider slider"
+						 "titulo titulo"
+						 "adopta1 adopta2"
+						 "doctor doctor"	
+						 "sponsor sponsor"
+						 "footer footer";	
+}
+/*  --------------------------------------------  */
+/*                    header                      */
+/*  --------------------------------------------  */
+.contenedor .cabeceraPrincipal{
+	grid-area: header;
+	background-color: #B5EF8A;
+	display: flex;
+	justify-content: space-between;
+}
+.contenedor .cabeceraPrincipal .logotipo{
+	padding: 10px 40px;
+}
+.contenedor .cabeceraPrincipal nav{
+	display: flex;
+	align-items: center;
+}
+.contenedor .cabeceraPrincipal nav a{
+	text-decoration: none;
+	padding: 0 20px;
+	color: #65524D;
+}
+.contenedor .cabeceraPrincipal nav a:hover{
+	background-color: #65524D;
+	color: #fff;
+}
+/*  --------------------------------------------  */
+/*                    slider                      */
+/*  --------------------------------------------  */
+.contenedor .sliderPrincipal{
+	grid-area: slider;
+	background-color: #333;
+}
+.contenedor .sliderPrincipal img{
+	width: 100%;
+}
+
+/*  --------------------------------------------  */
+/*                    titulo                      */
+/*  --------------------------------------------  */
+
+.contenedor .titulo{
+	grid-area: titulo;
+	background-color: #fff;
+	text-align: center;
+}
+.contenedor .titulo h2{
+	color: #9C9B9B;
+	font-size: 40px;
+	font-weight: 300;
+	padding: 30px 0;
+}
+
+/*  --------------------------------------------  */
+/*                   adopcion1                    */
+/*  --------------------------------------------  */
+
+.contenedor .adopcion1{
+	grid-area: adopta1;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+.contenedor .adopcion1 .cardog h3{
+	font-size: 25px;
+	color: #817E9F;
+	text-transform: uppercase;
+	padding: 5px 10px;
+}
+.contenedor .adopcion1 .cardog p{
+	padding: 5px 10px;
+	color: #605B5B;
+}
+
+/*  --------------------------------------------  */
+/*                   adopcion2                    */
+/*  --------------------------------------------  */
+
+.contenedor .adopcion2{
+	grid-area: adopta2;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+.contenedor .adopcion2 .rabbit h3{
+	font-size: 25px;
+	color: #817E9F;
+	text-transform: uppercase;
+	padding: 5px 10px;
+}
+.contenedor .adopcion2 .rabbit p{
+	padding: 5px 10px;
+	color: #605B5B;
+}
+
+/*  --------------------------------------------  */
+/*                   doctores                     */
+/*  --------------------------------------------  */
+
+.contenedor .doctor{
+	grid-area: doctor;
+	background-color: #333;
+}
+.contenedor .sponsor{
+	grid-area: sponsor;
+	background-color: #333;
+}
+/*  --------------------------------------------  */
+/*                    footer                      */
+/*  --------------------------------------------  */
+.contenedor .piePagina{
+	grid-area: footer;
+	background-color: #1B1B1B;
+	display: flex;
+	justify-content: space-between;
+}
+
+.piePagina .derechos{
+	color: #A3A3A3;
+	padding: 30px 50px;
+}
+.piePagina .redesSociales{
+	display: flex;
+	align-items: center;
+}
+.contenedor .piePagina .redesSociales a{
+	color: #D7F171;
+	text-decoration: none;
+	padding: 0 15px;
+	font-size: 35px;
+}
+.contenedor .piePagina .redesSociales a:hover{
+	color: #fff;
+}
